@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>hedlinks}}
+</head>
+<body>
+
+
+{{>nav}}
+
+<div class="container-fluid main_header">
+  <div class="row">
+    <div class="col-md-10 col-12 mx-auto">
+      <div class="main_content">
+        <form class="temp_form">
+          <input type="text" id="cityname" placeholder="enter your city name" autocomplete="off">
+          <input type="submit" value="submit" id="submitBtn">
+        </form>
+      </div>
+      <div class="tempinformation">
+       <div class="top_layer">
+         
+           <p class="date" id="today" ></p>
+       </div>
+       <div class="main_layer">
+         <p id="city_name">Get Output</p>
+          <div class="middle_layer data_hide">
+           <p id="temp"><span id="Cel_data">0</span> <sup>o</sup>C</p>
+           <p id="temp_status"> <i class="fa fa-cloud" aria-hidden="true"></i>
+           </p>
+
+          </div>  
+       </div>
+      </div>
+     </div>
+     </div>
+     </div>
+{{>footer}}
+
+<script src="js/main.js"></script>
+<script>
+
+
+
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const d = new Date();
+let month = months[d.getMonth()];
+document.getElementById("today").innerHTML = month;
+const ddd = new Date();
+let dataDate = document.getElementById("today")
+dataDate.innerHTML = `${ddd.toDateString(2)}`;
+    </script>
+</script>
+</body>
+</html>
